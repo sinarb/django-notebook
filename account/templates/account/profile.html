@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %} {% static 'style/home.css' %} {% endblock %}
+
+{% block title %} profile {% endblock %}
+
+
+{% block content %}
+    <h2 class="text-center">{{ user }}</h2>
+{% endblock %}

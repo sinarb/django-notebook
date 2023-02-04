@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}{% static 'style/home.css' %}{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row row-account justify-content-center align-items-center">
+                <div class="card card-account">
+                    <img class="card-img-top" src="{% static 'img/login.jpg' %}" alt="Card image cap">
+                    <div class="card-body">
+                        <form id="ss" autocomplete="off" method="post" action="">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="id_username">نام کاربری:</label>
+                                {{ form.username }}
+                            </div>
+                            <div class="form-group">
+                                <label for="id_password">پسورد:</label>
+                                {{ form.password }}
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary mt-3">ورود</button>
+                                <p class="tt"></p>
+                                <div>
+                                    میخواهید ثبت نام کنید؟
+                                    <a href="{% url 'account:register' %}">ثبت نام</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

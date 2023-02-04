@@ -1,0 +1,84 @@
+/*BASE*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.bg-black {
+    background-color: #303133;
+}
+
+.bg-beige {
+    background-color: #DFCDC9;
+}
+
+.errorlist {
+    list-style: none !important;
+}
+/*HOME*/
+/*........................................................*/
+
+.my_li {
+    color: white;
+}
+
+.my_li_detail {
+    color: white;
+    list-style: none;
+}
+
+.bold {
+    font-weight: bolder !important;
+    font-size: 1.2rem;
+}
+
+.my_li:hover {
+    background-color: rgb(255 255 255 / 66%) !important;
+    color: black;
+    border-radius: 5px;
+}
+
+.my-nav-link {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid #303133;
+    transition: all .3s linear;
+
+}
+
+.my-nav-link:hover {
+    border-bottom: 1px solid #EAE7DD;
+}
+
+.navbar{
+    padding-bottom: 0 !important;
+}
+
+.my-content {
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-card {
+    color: #EAE7DD;
+    min-width: 60rem;
+    min-height: 25rem;
+}
+
+.date-style{
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+
+/*..........................................*/
+/*LOGIN*/
+
+.card-account{
+    max-width: 25rem;
+}
+.row-account{
+    min-height: 100vh;
+}

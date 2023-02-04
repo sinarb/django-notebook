@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}{% static 'style/home.css' %}{% endblock %}
+{% block title %}detail{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row my-content">
+            <div class="card bg-black mb-3 my-card" style="max-width: 18rem;">
+                <div class="card-body text-success">
+                    <ul class="list-group list-group-flush">
+                        <li class="my_li_detail ms-2">
+                            <p class="fw-bold">{{ note.title }}</p>
+                            <hr>
+                            <p class="fw-bold">{{ note.body }}</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-danger mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        حذف
+                    </button>
+
+                    <a href="{% url 'home:edit_note' note.id %}" class="btn btn-success mb-2">ویرایش</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">حذف یادداشت {{ todo.title }}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    آیا از حذف این یادداشت مطمئن هستید؟
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-secondary" data-bs-dismiss="modal">خیر
+                    </a>
+                    <a href="{% url 'home:delete' note.id %}" type="button" class="btn btn-primary">بله</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

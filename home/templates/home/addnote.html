@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block style %}{% static 'style/home.css' %}{% endblock %}
+{% block title %}add note{% endblock %}
+
+{% block content %}
+        <section class="bg-beige">
+             <div class="container">
+            <div class="row my-content">
+                <div class="card bg-black p-5">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.title }}
+                </div>
+                <div class="mb-3">
+                    {{ form.body }}
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-outline-light">{{ do }}</button>
+                </div>
+            </form>
+        </div>
+            </div>
+        </div>
+        </section>
+
+{% endblock %}
+
+
